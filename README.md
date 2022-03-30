@@ -2,3 +2,11 @@
 - Tech/Fameworks used: OpenCV, Keras/TensorFlow, OpenCV and Deep Learning (look at the requirements.txt file)
 
 # Introduction
+
+# Materials and Methods
+
+## Data
+
+## Models
+
+# Results
