@@ -39,7 +39,7 @@ This project was designed as a final assignment at Data Science Academy at the [
 Team members:
 
 * [Petar Urdjanov](https://github.com/PetarUrdjanov)
-* [Savica Nedelkovska](https://github.com/SavicaNedelkovska)
+* [Savica Nedelkovska](https://github.com/Savica23)
 * [Marija Ilievska](https://github.com/MarijaIlievska)
 * [Martin Krsteski](https://github.com/MartinKrsteski)
 
