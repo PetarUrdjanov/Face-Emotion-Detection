@@ -44,4 +44,4 @@ Team members:
 * [Martin Krsteski](https://github.com/MartinKrsteski)
 
 Team supervisor:
-* [Viktor Domazetovski] (https://github.com/ViktorDomazetovski)
+* [Viktor Domazetovski](https://github.com/ViktorDomazetovski)
