@@ -6,7 +6,7 @@ Human emotion detection is implemented in many areas requiring additional securi
 
 > **Motivation and goals**
 
-This project is a part of Data Science Academy by Brainster with the primary goal, students to practically demonstrate the acquired knowledge. Technically, the project’s goal consists on training a deep neural network with labeled images of facial emotions. Finally, this is a multidisciplinary project involving affective computing, machine learning and computer vision. Learning how these different fields are related, and to understand how they can provide solutions to complex problems is another project’s goal. 
+This project is a part of Data Science Academy by [Brainster](https://brainster.co/) with the primary goal, students to practically demonstrate the acquired knowledge as a final assignment. Technically, the project’s goal consists on training a deep neural network with labeled images of facial emotions. Finally, this is a multidisciplinary project involving affective computing, machine learning and computer vision. Learning how these different fields are related, and to understand how they can provide solutions to complex problems is another project’s goal. 
 
 ## :bulb: Materials and Methods
 The task in this project is to create a robust Image classifier, that given an image will find all of the faces within the image and then recognize the emotion of the person. The **7 emotions** besides neutral class that classifier will need to choose from are:
@@ -34,7 +34,6 @@ This project has been divided into two phases:
 ## :key: Results
 
 ## :clap: Authors
-This project was designed as a final assignment at Data Science Academy at the [Brainster Data Science Academy](https://brainster.co/).
 
 Team members:
 
