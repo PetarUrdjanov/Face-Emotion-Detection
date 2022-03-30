@@ -23,9 +23,8 @@ We can generalize the emotion detection steps as follows:
 
 This project has been divided into two phases: 
 
-> The first phase consisted on the use of a facial emotion labeled data set to train a deep learning network.More details about can be found in Chapter **Data**.
-
-> The second phase focused on testing the model, a detailed explanation is presented in Chapter **Models**
+The first phase consisted on the use of a facial emotion labeled data set to train a deep learning network.More details about can be found in Chapter **Data**.
+The second phase focused on testing the model, a detailed explanation is presented in Chapter **Models**
 
 ### :open_file_folder: Data
 
