@@ -102,9 +102,10 @@ In this part of the project, we research the libraries and neural networks which
 
 **NESTO KRATKO ZA TOA STO KORISTIME ZA VIDEO**
 
+
+![ImplementationPipline](ImplementationPipline.jpg)
+
 **OBJASNUVAME AKO SAKAME I SO KOD ZA CEKORITE PODOLU**
-
-
 - Face detection 
 - Feature extraction and classification
 - Training, testing, validating (comparing faces)
