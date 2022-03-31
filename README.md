@@ -40,7 +40,7 @@ _______________________________
 
 This dataset consists of **35887 images** belonging to seven classes:
 
-| Dataset         | Total      |      
+| Dataset         | Total      |
 | -------------   | -----------| 
 | **0 - anger**   | 4953       | 
 | **1 - disgust** |  547       | 
@@ -50,6 +50,8 @@ This dataset consists of **35887 images** belonging to seven classes:
 | **5 - surprise**| 4002       | 
 | **6 - neutral** | 6198       | 
 | **Total**       |35887       |
+
+ ![EmotionLabel](EmotionLabel.jpg)
 
 ### Preview of dataset (first 7 images from the 7 target categories)
 ![anger](Anger.jpg)
@@ -61,6 +63,29 @@ This dataset consists of **35887 images** belonging to seven classes:
 ![neutral](Neutral.jpg)
 ____________________________________
 - Dataset Preparation
+
+We split the dataset on **train 80% /test 10% /validation 10%** data with python code
+```
+df_train=df.loc[df['Usage']=='Training']
+df_test=df.loc[df['Usage']=='PublicTest']
+df_validation=df.loc[df['Usage']=='PrivateTest']
+
+```
+and we get images by classes ratio:
+| Dataset         | Training   | Test    | Validation | Total |
+| -------------   | -----------| ------- | ---------- | ----- |
+| **0 - anger**   | 4953       |         |            |       |
+| **1 - disgust** |  547       |         |            |       |
+| **2 - fear**    | 5121       |         |            |       |
+| **3 - happines**| 8989       |         |            |       |
+| **4 - sadness** | 6077       |         |            |       |
+| **5 - surprise**| 4002       |         |            |       |
+| **6 - neutral** | 6198       |         |            |       |
+| **Total**       |35887       |         |            |       |
+
+
+
+
 
 ### 💻: Models
 
