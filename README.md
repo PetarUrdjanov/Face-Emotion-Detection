@@ -52,7 +52,13 @@ This dataset consists of **35887 images** belonging to seven classes:
 | **Total**       |35887       |
 
 ### Preview of dataset (first 7 images from the 7 target categories)
-![Anger](Anger.jpg)
+![anger](Anger.jpg)
+![disgust](Disgust.jpg)
+![fear](Fear.jpg)
+![happiness](Happiness.jpg)
+![sadness](Sadness.jpg)
+![surprise](Surprise.jpg)
+![neutral](Neutral.jpg)
 
 
 ### 💻: Models
