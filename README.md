@@ -84,10 +84,13 @@ and we get images by classes ratio:
 | **Total**       |            |         |            |35887   |
 
 
-
-
-
 ### 💻: Models
+
+- Research of models
+
+In this part of the project, we research the libraries and neural networks which correspond the best with our needs to finish the tasks. Nowadays, various packages are available to perform machine learning, deep learning, and computer vision problems. 
+**OpenCV** is an open-source a video and image processing library and it is used for image and video analysis, like facial detection, license plate reading, photo editing, advanced robotic vision, and many more. It is supported by different programming languages such as R, Python, etc. It runs probably on most platforms such as Windows, Linux, and macOS. OpenCV is  library 
+
 
 ### 🔑: Results
 
