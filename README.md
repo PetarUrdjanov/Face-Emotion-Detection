@@ -86,12 +86,27 @@ and we get images by classes ratio:
 
 ### 💻: Models
 
-- Research of models
+- Research of tools and libraries
 
 In this part of the project, we research the libraries and neural networks which correspond the best with our needs to finish the tasks. Nowadays, various packages are available to perform machine learning, deep learning, and computer vision problems. 
 
-**OpenCV** is an open-source a video and image processing library and it is used for image and video analysis, like facial detection, license plate reading, photo editing, advanced robotic vision, and many more. It is supported by different programming languages such as R, Python, etc. It runs on most platforms such as Windows, Linux, and macOS.
+**OpenCV** is an open-source a video and image processing library and it is used for image and video analysis, like facial detection, license plate reading, photo editing, advanced robotic vision, and many more. It is supported by different programming languages such as R, Python, etc. It runs on most platforms such as Windows, Linux, and macOS. It is a complete package which can be used with other libraries to form a pipeline for any image extraction or detection framework.
 
+**Python** is a powerful scripting language and is very useful for solving statistical problems involving machine learning algorithms. It has various utility functions which help in pre-processing. Processing is fast and it is supported on almost all platforms.It provides the pandas and numpy framework which helps in manipulation of data as per our needs.
+
+**Scikit-learn** is the machine learning library in python. It comprises of matplotlib, numpy and a wide array of machine learning algorithms.The algorithm it provides can be used for classification and regression problems and their sub-types.
+
+**Jupyter Notebook** is the IDE to combine python with all the libraries we will be using in our implementation. It is interactive, although some complex computations require time to complete. Plots and images are displayed instantly. 
+
+**NESTO KRATKO ZA TOA KOJ PRE-TRAIN MODEL SME GO ZEMALE PREDVID I ZASTO**
+
+**NESTO KRATKO ZA TOA STO KORISTIME ZA VIDEO**
+
+**OBJASNUVAME AKO SAKAME I SO KOD ZA CEKORITE PODOLU**
+- Face detection 
+- Feature extraction and classification
+- Training, testing, validating (comparing faces)
+- Compose neural network arhitecture
 
 
 ### 🔑: Results
