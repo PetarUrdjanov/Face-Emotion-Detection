@@ -35,7 +35,7 @@ This project has been divided into three phases:
 As it was stated previously, the following project belongs to the supervised learning category. The need for a data set containing images of facial emotions and their corresponding label is crucial. One of the first challenges while doing this project was collecting the data. We decided to collect images using ready-made data and datasets that were created for facial recognition purposes. The reason for this is the topic-specific, recognizing emotions. For this purpose, a couple of data sets were chosen to perform the experiment:
 
 **DA NABROIME KOI DATASET GI KORISTEVME**
-
+_______________________________
 - Dataset Collection
 
 This dataset consists of **35887 images** belonging to seven classes:
@@ -59,7 +59,8 @@ This dataset consists of **35887 images** belonging to seven classes:
 ![sadness](Sadness.jpg)
 ![surprise](Surprise.jpg)
 ![neutral](Neutral.jpg)
-
+____________________________________
+- Dataset Preparation
 
 ### 💻: Models
 
