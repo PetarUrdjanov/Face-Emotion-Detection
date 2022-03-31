@@ -51,7 +51,8 @@ This dataset consists of **35887 images** belonging to seven classes:
 | **6 - neutral** | 6198       | 
 | **Total**       |35887       |
 
-
+### Preview of dataset (first 7 images from the 7 target categories)
+[Anger](
 
 
 ### 💻: Models
