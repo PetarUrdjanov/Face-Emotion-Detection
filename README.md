@@ -8,8 +8,8 @@ Human emotion detection is implemented in many areas requiring additional securi
 
 This project is a part of Data Science Academy by [Brainster](https://brainster.co/) with the primary goal, students to practically demonstrate the acquired knowledge as a final assignment. Technically, the project’s goal consists on training a deep neural network with labeled images of facial emotions. Finally, this is a multidisciplinary project involving affective computing, machine learning and computer vision. Learning how these different fields are related, and to understand how they can provide solutions to complex problems is another project’s goal. 
 
-## :bulb: Materials and Methods
-The task in this project is to create a robust Image classifier, that given an image will find all of the faces within the image and then recognize the emotion of the person. The **7 emotions** besides neutral class that classifier will need to choose from are:
+## 💡: Materials and Methods
+The task in this project is to create a robust Image classifier, that given an image will find all of the faces within the image and then recognize the emotion of the person. The **:seven:emotions** besides neutral class that classifier will need to choose from are:
 
 <img src="https://blog.trginternational.com/hs-fs/hubfs/images/emotion-contempt.jpg?width=600&name=emotion-contempt.jpg" width=200 hight=200> <img src="https://blog.trginternational.com/hs-fs/hubfs/images/emotion-happiness.jpeg?width=595&name=emotion-happiness.jpeg" width=200 hight=200>
 <img src="https://blog.trginternational.com/hs-fs/hubfs/images/emotion-sadness.jpg?width=595&name=emotion-sadness.jpg" width=200 hight=200> <img src="https://blog.trginternational.com/hs-fs/hubfs/images/emotion-fear.jpg?width=519&name=emotion-fear.jpg" width=200 hight=200>
@@ -21,25 +21,33 @@ We can generalize the emotion detection steps as follows:
 - *Feature extraction*
 - *Classification based on the features*
 
-This project has been divided into two phases: 
+This project has been divided into three phases: 
 
-The first phase consisted on the use of a facial emotion labeled data set to train a deep learning network.More details about can be found in Chapter **Data**.
-The second phase focused on testing the model, a detailed explanation is presented in Chapter **Models**
+> **:one: phase** focused on dataset creation.More details about can be found in Chapter **Data**.
 
-### :open_file_folder: Data
+> **:two: phase** focused on training the model and consisted on the use of a facial emotion labeled data set to train a deep learning network. A detailed explanation is presented in Chapter **Models**
 
-### :open_file_folder: Models
+> **:three: phase** is focused on testing the model performance, explanation is presented in Chapter **Results**
 
-## :key: Results
+### 📂: Data
+- General Project Research
 
-## :clap: Authors
+As it was stated previously, the following project belongs to the supervised learning category. The need for a data set containing images of facial emotions and their corresponding label is crucial. One of the first challenges while doing this project was collecting the data. We decided to collect images using ready-made data and datasets that were created for facial recognition purposes. The reason for this is the topic-specific, recognizing emotions. For this purpose, a couple of data sets were chosen to perform the experiment:
 
-Team members:
 
+
+
+### 💻: Models
+
+### 🔑: Results
+
+## 👏: Authors
+
+💪:Team members:
 * [Petar Urdjanov](https://github.com/PetarUrdjanov)
 * [Savica Nedelkovska](https://github.com/Savica23)
 * [Marija Ilievska](https://github.com/MarijaIlievska)
 * [Martin Krsteski](https://github.com/MartinKrsteski)
 
-Team supervisor:
+👌Team supervisor:
 * [Viktor Domazetovski](https://github.com/ViktorDo1)
