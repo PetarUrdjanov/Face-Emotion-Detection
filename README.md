@@ -72,16 +72,16 @@ df_validation=df.loc[df['Usage']=='PrivateTest']
 
 ```
 and we get images by classes ratio:
-| Dataset         | Training   | Test    | Validation | Total |
-| -------------   | -----------| ------- | ---------- | ----- |
-| **0 - anger**   | 4953       |         |            |       |
-| **1 - disgust** |  547       |         |            |       |
-| **2 - fear**    | 5121       |         |            |       |
-| **3 - happines**| 8989       |         |            |       |
-| **4 - sadness** | 6077       |         |            |       |
-| **5 - surprise**| 4002       |         |            |       |
-| **6 - neutral** | 6198       |         |            |       |
-| **Total**       |35887       |         |            |       |
+| Dataset         | Training   | Test    | Validation | Total  |
+| -------------   | -----------| ------- | ---------- | -----  |
+| **0 - anger**   |            |         |            | 4953   |
+| **1 - disgust** |            |         |            |  547   |
+| **2 - fear**    |            |         |            | 5121   |
+| **3 - happines**|            |         |            | 8989   |
+| **4 - sadness** |            |         |            | 6077   |
+| **5 - surprise**|            |         |            | 4002   |
+| **6 - neutral** |            |         |            | 6198   |
+| **Total**       |            |         |            |35887   |
 
 
 
