@@ -115,7 +115,7 @@ We have trained several models and tried some pre-treined(VGG-16, ResNet50) and 
 ## **TABELI OD MODELI ACCURACIES i network arhitecture**
 
 
-![ImplementationPipline](folder/Implement_pipline.jpg)
+![ImplementationPipline](folder/Implement_pipeline.jpg)
 
 The whole process starts after we have evaluated the models and choose :two: of them for interpretation. One model is trained at FER-2013 and the other on CK+ dataset. 
 Both of the models are treined on new unseen images. 
