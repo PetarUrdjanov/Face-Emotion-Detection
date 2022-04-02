@@ -98,6 +98,8 @@ In this part of the project, we research the libraries and neural networks which
 
 **Jupyter Notebook** is the IDE to combine python with all the libraries we will be using in our implementation. It is interactive, although some complex computations require time to complete. Plots and images are displayed instantly. 
 
+**TensorFlow** is used to create large-scale neural networks with many layers. TensorFlow is mainly used for deep learning or machine learning problems such as Classification, Perception, Understanding, Discovering, Prediction and Creation.The advantage of using TensorFlow for object recognition algorithms is that it helps to classify and identify arbitrary objects within larger images.  
+
 **NESTO KRATKO ZA TOA KOJ PRE-TRAIN MODEL SME GO ZEMALE PREDVID I ZASTO**
 
 **NESTO KRATKO ZA TOA STO KORISTIME ZA VIDEO**
