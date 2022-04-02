@@ -33,10 +33,13 @@ This project has been divided into three phases:
 - General Project Research
 
 As it was stated previously, the following project belongs to the supervised learning category. The need for a data set containing images of facial emotions and their corresponding label is crucial. One of the first challenges while doing this project was collecting the data. We decided to collect images using ready-made data and datasets that were created for facial recognition purposes. The reason for this is the topic-specific, recognizing emotions. For this purpose, a couple of data sets were chosen to perform the experiment:
+- FER-2013: The data consists of 48x48 pixel grayscale images of faces. The faces have been automatically registered so that the face is more or less centred and occupies about the same amount of space in each image.
 
-**DA NABROIME KOI DATASET GI KORISTEVME**
+- Extended Cohn-Kanade (CK+): This data set is an extension of the previous original Cohn-Kanade one. The Extended Cohn-Kanade (CK+) includes 593 sequences from 123 subjects.The images are frontal views or 30 degree views. Its size can be either 640 x 490 pixels or 640 x 480 pixels with 8-bit gray-scale or 24-bit color values PNG files. For the purpose of the model we rescaled and reshaped into 48x48 pixel grayscale images.  
 _______________________________
 - Dataset Collection
+
+**FER-2013 Dataset**
 
 This dataset consists of **35887 images** belonging to seven classes:
 
@@ -61,6 +64,23 @@ This dataset consists of **35887 images** belonging to seven classes:
 ![sadness](folder/Sadness.jpg)
 ![surprise](folder/Surprise.jpg)
 ![neutral](folder/Neutral.jpg)
+
+**Extended Cohn-Kanade (CK+)**
+
+This dataset consists of **981 images** belonging to seven classes:
+
+| Dataset         | Total    |
+| -------------   | ---------| 
+| **0 - anger**   | 135      | 
+| **1 - disgust** | 177      | 
+| **2 - fear**    |  75      | 
+| **3 - happines**| 207      | 
+| **4 - sadness** |  84      |
+| **5 - surprise**| 249      | 
+| **6 - contempt**|  54      | 
+| **Total**       | 981      |
+
+![EmotionLabel](folder/EmotionLabel.jpg)
 ____________________________________
 - Dataset Preparation
 
