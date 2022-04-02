@@ -109,6 +109,7 @@ In this part of the project, we research the libraries and neural networks which
 We have trained several models and tried some pre-treined(VGG-16, ResNet50) and we got the following accuracies:
 ![VGG-16](folder/VGG-16.png)
 ![ResNet50](folder/ResNet50.png)
+![Emotion_model_arch](folder/Emotion_model_arch.png)
 
 ## **TABELI OD MODELI ACCURACIES i network arhitecture**
 
