@@ -54,7 +54,7 @@ This dataset consists of **35887 images** belonging to seven classes:
  ![EmotionLabel](EmotionLabel.jpg)
 
 ### Preview of dataset (first 7 images from the 7 target categories)
-![anger](Anger.jpg)
+![anger](folder/Anger.jpg)
 ![disgust](Disgust.jpg)
 ![fear](Fear.jpg)
 ![happiness](Happiness.jpg)
