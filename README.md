@@ -83,28 +83,12 @@ This dataset consists of **981 images** belonging to seven classes:
 
 ### Emotion Label CK+
 ![EmotionLabel](folder/EmotionLabelCK+.jpg)
+
+### Preview (first 7 images from the 7 target categories)
 ____________________________________
 - Dataset Preparation
 
-We split the dataset on **train 80% /test 10% /validation 10%** data with python code
-```
-df_train=df.loc[df['Usage']=='Training']
-df_test=df.loc[df['Usage']=='PublicTest']
-df_validation=df.loc[df['Usage']=='PrivateTest']
-
-```
-and we get images by classes ratio:
-| Dataset         | Training   | Test    | Validation | Total  |
-| -------------   | -----------| ------- | ---------- | -----  |
-| **0 - anger**   |            |         |            | 4953   |
-| **1 - disgust** |            |         |            |  547   |
-| **2 - fear**    |            |         |            | 5121   |
-| **3 - happines**|            |         |            | 8989   |
-| **4 - sadness** |            |         |            | 6077   |
-| **5 - surprise**|            |         |            | 4002   |
-| **6 - neutral** |            |         |            | 6198   |
-| **Total**       |            |         |            |35887   |
-
+We split the dataset on **train /test /validation** data with python code and we apply them into model. 
 
 ### 💻: Models
 
@@ -122,21 +106,121 @@ In this part of the project, we research the libraries and neural networks which
 
 **TensorFlow** is used to create large-scale neural networks with many layers. TensorFlow is mainly used for deep learning or machine learning problems such as Classification, Perception, Understanding, Discovering, Prediction and Creation.The advantage of using TensorFlow for object recognition algorithms is that it helps to classify and identify arbitrary objects within larger images.  
 
-**NESTO KRATKO ZA TOA KOJ PRE-TRAIN MODEL SME GO ZEMALE PREDVID I ZASTO**
+We have trained several models and tried some pre-treined(VGG-16, ResNet50) and we got the following accuracies:
 
-**NESTO KRATKO ZA TOA STO KORISTIME ZA VIDEO**
+## **TABELI OD MODELI ACCURACIES i network arhitecture**
 
 
 ![ImplementationPipline](folder/Implement_pipline.jpg)
 
-**OBJASNUVAME AKO SAKAME I SO KOD ZA CEKORITE PODOLU**
-- Face detection 
-- Feature extraction and classification
-- Training, testing, validating (comparing faces)
-- Compose neural network arhitecture
+The whole process starts after we have evaluated the models and choose :two: of them for interpretation. One model is trained at FER-2013 and the other on CK+ dataset. 
+Both of the models are treined on new unseen images. 
+First we feed the images into a **face detection** function that outputs recognized faces. This faces together with the model are feed into a **get_prediction** function which outputs emotion label, prediction probability for the higest class and dataframe with the probabilities of all the classes. All of this is put into a **pipeline** and the final output is the inputed image with rectangles on the detected faces labeled with emotion and probability. Additionaly each face is printed together with barchart of probability of all classes. 
 
+### preview na output
 
-### 🔑: Results
+> **face detection function**
+
+```
+faceCascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
+def face_detection_with_chart(image,height,width,c):
+    arr_img=[]
+    face_list=[]
+    if c == 1:
+        image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+        faces = faceCascade.detectMultiScale(image, scaleFactor=1.3, minNeighbors=3, minSize=(30, 30))
+    else:
+        faces = faceCascade.detectMultiScale(image, scaleFactor=1.3, minNeighbors=3, minSize=(30, 30))
+    for (x, y, w, h) in faces:
+        roi_gray = image[y:y + h, x:x + w]
+        roi_gray = cv2.resize(roi_gray, (height,width), interpolation=cv2.INTER_LINEAR_EXACT)
+        img = np.expand_dims(roi_gray, axis=-1)
+        img = img.reshape(1,height,width,c)
+        arr_img.append(img)
+        face_list.append(roi_gray)
+        
+    return faces,arr_img,face_list
+
+```
+
+> **get prediction function**
+
+```
+def get_prediction(image,model):
+    
+    emotion_label = np.array(['anger','disgust','fear', 'happy', 'sad', 'surprise','neutral'])
+    image_scaled = image.astype('float32')/255.0 
+    prediction = model.predict(image_scaled)
+    predict_class = np.argmax(prediction)
+    predict_proba = np.round(np.max(prediction),2)
+    emotion = emotion_label[predict_class]   
+    df=pd.DataFrame(prediction).T.set_index(emotion_label).rename({0: 'probability'}, axis='columns')
+    
+    return emotion,predict_proba,df
+```
+
+> **pipeline**
+
+```
+def pipeline_with_chart(image,model,w,h,c):
+    
+    faces, imgs, face_list= face_detection_with_chart(image,w,h,c)
+    dfs=[]
+
+    for img, (x, y, w, h) in zip(imgs,faces):
+        emotion, probability, df = get_prediction(img,model)
+        color = get_color(probability)
+        image = cv2.rectangle(image, (x, y), (x + w, y + h), color, 5)
+        font = cv2.FONT_HERSHEY_SIMPLEX
+        fontScale = 1
+        thickness = 2
+        dfs.append(df)
+        image = cv2.putText(image, str(emotion)+':'+str(probability), (x,y), font, fontScale, color, thickness)
+        
+    plt.figure(figsize=(10,10))
+    plt.imshow(image)
+    plt.show()
+    
+    fig=plt.figure(figsize=(10,25))
+    a=len(dfs)
+    b=2
+    i=1
+    y_pos=np.arange(len(df.index.values))
+    for idx, (df,face) in enumerate(zip(dfs,face_list)):
+        
+        plt.subplot(a, b, i)
+        plt.title('Face :'+ str(idx+1))
+        plt.imshow(face, cmap='gray')
+        i = i + 1
+
+        plt.subplot(a, b, i)
+        plt.bar(y_pos,df['probability'])
+        plt.xticks(y_pos,df.index.values)
+        plt.ylabel('prob percentage')
+        plt.xlabel('emotion')
+        plt.title('Emotion probability distribution')
+        i = i + 1
+```
+At the end we have implemented the model for real time video capture that will recognize your face and emotion. Below is the code snippet and some examples from us. 
+
+```
+cap=cv2.VideoCapture(0) 
+while True:
+        ret, frame=cap.read() 
+        if ret:
+                frame = pipeline_video(frame,model)
+                cv2.imshow('frame', frame)
+                cv2.waitKey(1)
+
+        if cv2.waitKey(1) & 0xFF == ord('a'):
+            break
+
+cap.release()
+cv2.destroyAllWindows()
+
+```
+
+### 🔑: Results and conclusions
 
 
 
