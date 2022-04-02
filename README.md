@@ -51,16 +51,16 @@ This dataset consists of **35887 images** belonging to seven classes:
 | **6 - neutral** | 6198       | 
 | **Total**       |35887       |
 
- ![EmotionLabel](EmotionLabel.jpg)
+ ![EmotionLabel](folder/EmotionLabel.jpg)
 
 ### Preview of dataset (first 7 images from the 7 target categories)
 ![anger](folder/Anger.jpg)
-![disgust](Disgust.jpg)
-![fear](Fear.jpg)
-![happiness](Happiness.jpg)
-![sadness](Sadness.jpg)
-![surprise](Surprise.jpg)
-![neutral](Neutral.jpg)
+![disgust](folder/Disgust.jpg)
+![fear](folder/Fear.jpg)
+![happiness](folder/Happiness.jpg)
+![sadness](folder/Sadness.jpg)
+![surprise](folder/Surprise.jpg)
+![neutral](folder/Neutral.jpg)
 ____________________________________
 - Dataset Preparation
 
@@ -105,7 +105,7 @@ In this part of the project, we research the libraries and neural networks which
 **NESTO KRATKO ZA TOA STO KORISTIME ZA VIDEO**
 
 
-![ImplementationPipline](Implement_pipline.jpg)
+![ImplementationPipline](folder/Implement_pipline.jpg)
 
 **OBJASNUVAME AKO SAKAME I SO KOD ZA CEKORITE PODOLU**
 - Face detection 
