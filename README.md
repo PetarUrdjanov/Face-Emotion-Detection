@@ -107,6 +107,8 @@ In this part of the project, we research the libraries and neural networks which
 **TensorFlow** is used to create large-scale neural networks with many layers. TensorFlow is mainly used for deep learning or machine learning problems such as Classification, Perception, Understanding, Discovering, Prediction and Creation.The advantage of using TensorFlow for object recognition algorithms is that it helps to classify and identify arbitrary objects within larger images.  
 
 We have trained several models and tried some pre-treined(VGG-16, ResNet50) and we got the following accuracies:
+![VGG-16](folder/VGG-16.png)
+![ResNet50](folder/ResNet50.png)
 
 ## **TABELI OD MODELI ACCURACIES i network arhitecture**
 
