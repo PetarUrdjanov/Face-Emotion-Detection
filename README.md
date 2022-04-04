@@ -153,6 +153,8 @@ The Cohn-Kanade dataset on the other hand has relatively small number of images 
 
 ![ck_model_architecture](folder/ck_model_architecture.png)
 
+**Model accuracy**
+
 | Model                | Accuracy |
 | -------------------- | -------  | 
 | **Model original**   | 1.0   | 
