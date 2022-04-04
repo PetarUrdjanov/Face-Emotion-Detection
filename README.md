@@ -84,7 +84,9 @@ This dataset consists of **981 images** belonging to seven classes:
 ### Emotion Label CK+
 ![EmotionLabel](folder/EmotionLabelCK+.jpg)
 
-### Preview (first 7 images from the 7 target categories)
+### Preview CK+
+
+![preview ck+](folder/preview ck+.png)
 ____________________________________
 - Dataset Preparation
 
