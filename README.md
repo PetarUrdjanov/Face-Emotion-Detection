@@ -133,10 +133,39 @@ The architectures of the two models that we created are below.
 The confusion matrix of the two module showed that the two models differ in the accuracy between the classes although the total accuracy is pretty match the same.
 
 **Confusion matrices of Model 1 and Model 2**
+
 ![confusion_matrix_fer2013](folder/confusion_matrix_fer2013.png)
 
+Additionally we compare the metrics for the two models and got the chart below.
 
-## **TABELI OD MODELI ACCURACIES i network arhitecture**
+**Metrics comparison on the FER2013 dataset**
+
+![model_scores_fer2013](folder/model_scores_fer2013.png)
+
+***Cohn-Kanade dataset***
+
+The Cohn-Kanade dataset on the other hand has relatively small number of images that are easy to be learned for most of the models. In fact one of the models that we created, learned the whole dataset and got 1.0 accuracy on the test dataset. For that purpose we made data augmentation on the whole dataset with some transformations on the images. We trained the model on the augmented dataset and validated on the original dataset. The accuracies of the two models are shown below.
+
+| Model                | Accuracy |
+| -------------------- | -------  | 
+| **Model original**   | 1.0   | 
+| **Model augmented**  | 0.937 | 
+
+The training and the validation process is shown in the chart below. We can see that the data-augmented model has tougher time to learn the dataset although its accuracy is still relatively high compared to those in the FER2013 dataset.
+
+![model_comparison_ck+](folder/model_comparison_ck+.png)
+
+The confusion matrix and the other classification metrix are given below.
+
+**Confusion matrix for the original data and the data-augmented model**
+
+![confusion_matrix_ck+](folder/confusion_matrix_ck+.png)
+
+
+**Model metrics comparison**
+
+![model_scores_ck+](folder/model_scores_ck+.png)
+
 
 
 ![ImplementationPipline](folder/Implement_pipeline.jpg)
