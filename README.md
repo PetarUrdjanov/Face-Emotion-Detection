@@ -68,7 +68,7 @@ This dataset consists of **35887 images** belonging to seven classes:
 
 > **Extended Cohn-Kanade (CK+)**
 
-This dataset consists of **981 images** belonging to seven classes:
+This dataset consists of **1280 images** belonging to seven classes:
 
 | Dataset         | Total    |
 | -------------   | ---------| 
@@ -78,8 +78,8 @@ This dataset consists of **981 images** belonging to seven classes:
 | **3 - happines**| 207      | 
 | **4 - sadness** |  84      |
 | **5 - surprise**| 249      | 
-| **6 - contempt**|  54      | 
-| **Total**       | 981      |
+| **6 - neutral**|  353      | 
+| **Total**       | 1280      |
 
 ### Emotion Label CK+
 ![EmotionLabel](folder/EmotionLabelCK+.jpg)
@@ -109,6 +109,8 @@ In this part of the project, we research the libraries and neural networks which
 **TensorFlow** is used to create large-scale neural networks with many layers. TensorFlow is mainly used for deep learning or machine learning problems such as Classification, Perception, Understanding, Discovering, Prediction and Creation.The advantage of using TensorFlow for object recognition algorithms is that it helps to classify and identify arbitrary objects within larger images.  
 
 We have trained several models and tried some pre-treined models (VGG-16, ResNet50).
+
+***FER2013 dataset***
 
 For the FER2013 dataset the accuracies on the test data are shown in the table below:
 | Model        | Accuracy |
