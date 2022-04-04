@@ -170,9 +170,29 @@ The confusion matrix and the other classification metrix are given below.
 
 Bearing the fact that the CNN and the Deep Learning as a whole are not intuitive for the human brain, it is nice to see what in fact the model learns and how it differs the different classes. We tried to explain the models using shap and we have got some interesting results. Below there are three examples from instances that the model sees them as angry, surprise and happy, respectively with a relatively high percent. The examples are taken from the Cohn-Kanade+ dataset.
 
+Angry predicted instance
+
+![model_explainability_ck+model_da_anry](folder/model_explainability_ck+model_da_anry.png)
 
 
+Surprise predicted instance
 
+![model_explainability_ck+model_da_surprise](folder/model_explainability_ck+model_da_surprise.png)
+
+
+Happy predicted instance
+
+![model_explainability_ck+model_da](folder/model_explainability_ck+model_da.png)
+
+Below there is another example for model explainability but from the FER2013 dataset. We can notice the difference between the images from which the model learns. It is clear that for good model prediction one of the biggest influencers is the dataset itself. On the other hand learning from images like this will give the model more diversity and power to predict clearer images.
+
+Happy predicted instance from FER2013
+
+![model_explainability_fer2013 model_1](folder/model_explainability_fer2013 model_1.png)
+
+We can conclude that both of the models learn and recognize as we humans do. For example the happy faces are recognized by the broad lips and the holes in the cheeks. The shape of the eyebrows play decisive role in all of the three emotions shown above.
+
+**Pipeline for face detection and emotion recognition**
 
 ![ImplementationPipline](folder/Implement_pipeline.jpg)
 
