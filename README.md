@@ -190,9 +190,9 @@ Below there is another example for model explainability but from the FER2013 dat
 
 Happy predicted instance from FER2013
 
-![model_explainability_fer2013 model_1](folder/model_explainability_fer2013 model_1.png)
+![model_explainability_fer2013model_1](folder/model_explainability_fer2013model_1.png)
 
-We can conclude that both of the models learn and recognize as we humans do. For example the happy faces are recognized by the broad lips and the holes in the cheeks. The shape of the eyebrows play decisive role in all of the three emotions shown above.
+We can conclude that both of the models learn and recognize as we humans do. For example the happy faces are recognized by the broad lips and the holes in the cheeks. The shape of the eyebrows play decisive role in all of the three emotions shown above. On the surprised face the dominant factor is the opened mouth, while the angry face is recognized mainly by the eye-brows and the tight-shut lips.
 
 **Pipeline for face detection and emotion recognition**
 
