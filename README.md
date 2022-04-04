@@ -175,7 +175,8 @@ The confusion matrix and the other classification metrix are given below.
 
 ***Model explainability***
 
-Bearing the fact that the CNN and the Deep Learning as a whole are not intuitive for the human brain, it is nice to see what in fact the model learns and how it differs the different classes. We tried to explain the models using shap and we have got some interesting results. Below there are three examples from instances that the model sees them as angry, surprise and happy, respectively with a relatively high percent. The examples are taken from the Cohn-Kanade+ dataset.
+Bearing the fact that the CNN and the Deep Learning as a whole are not intuitive for the human brain, it is nice to see what in fact the model learns and how it differs the different classes. We tried to explain the models using shap and we have got some interesting results. SHAP (SHapley Additive exPlanations) is a game theoretic approach to explain the output of any machine learning model. In our case, the deep explainer tried to explain what were the patterns that the model used to predict the emotions. The blue lines depicts what doesn't go in favor to the class, and the red what is in favor to the class.
+Below there are three examples from instances that the model sees them as angry, surprise and happy, respectively with a relatively high percent. The examples are taken from the Cohn-Kanade+ dataset.
 
 Angry predicted instance
 
@@ -197,7 +198,7 @@ Happy predicted instance from FER2013
 
 ![model_explainability_fer2013model_1](folder/model_explainability_fer2013model_1.png)
 
-We can conclude that both of the models learn and recognize as we humans do. For example the happy faces are recognized by the broad lips and the holes in the cheeks. The shape of the eyebrows play decisive role in all of the three emotions shown above. On the surprised face the dominant factor is the opened mouth, while the angry face is recognized mainly by the eye-brows and the tight-shut lips.
+We can conclude that both of the models learn and recognize as we humans do. For example the happy faces are recognized by the broad smile and the holes in the cheeks. The shape of the eyebrows play decisive role in all of the three emotions shown above. On the surprised face the dominant factor is the opened mouth, while the angry face is recognized mainly by the eye-brows and the tight-shut lips.
 
 **Pipeline for face detection and emotion recognition**
 
@@ -224,19 +225,18 @@ First we feed the images into a **face detection** function that outputs recogni
 
 ```
 faceCascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
-def face_detection_with_chart(image,height,width,c):
+def face_detection_with_chart(image):
     arr_img=[]
     face_list=[]
-    if c == 1:
-        image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-        faces = faceCascade.detectMultiScale(image, scaleFactor=1.3, minNeighbors=3, minSize=(30, 30))
-    else:
-        faces = faceCascade.detectMultiScale(image, scaleFactor=1.3, minNeighbors=3, minSize=(30, 30))
+    
+    image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    faces = faceCascade.detectMultiScale(image, scaleFactor=1.3, minNeighbors=3, minSize=(30, 30))
+    
     for (x, y, w, h) in faces:
         roi_gray = image[y:y + h, x:x + w]
-        roi_gray = cv2.resize(roi_gray, (height,width), interpolation=cv2.INTER_LINEAR_EXACT)
+        roi_gray = cv2.resize(roi_gray, (48,48), interpolation=cv2.INTER_LINEAR_EXACT)
         img = np.expand_dims(roi_gray, axis=-1)
-        img = img.reshape(1,height,width,c)
+        img = img.reshape(1,48,48,1)
         arr_img.append(img)
         face_list.append(roi_gray)
         
@@ -249,7 +249,7 @@ def face_detection_with_chart(image,height,width,c):
 ```
 def get_prediction(image,model):
     
-    emotion_label = np.array(['anger','disgust','fear', 'happy', 'sad', 'surprise','neutral'])
+    emotion_label = np.array(['anger','disgust','fear', 'happy', 'sad', 'surprise', 'neutral'])
     image_scaled = image.astype('float32')/255.0 
     prediction = model.predict(image_scaled)
     predict_class = np.argmax(prediction)
@@ -263,9 +263,9 @@ def get_prediction(image,model):
 > **pipeline**
 
 ```
-def pipeline_with_chart(image,model,w,h,c):
+def pipeline_with_chart(image,model):
     
-    faces, imgs, face_list= face_detection_with_chart(image,w,h,c)
+    faces, imgs, face_list= face_detection_with_chart(image)
     dfs=[]
 
     for img, (x, y, w, h) in zip(imgs,faces):
@@ -282,7 +282,7 @@ def pipeline_with_chart(image,model,w,h,c):
     plt.imshow(image)
     plt.show()
     
-    fig=plt.figure(figsize=(10,25))
+    fig=plt.figure(figsize=(15,50))
     a=len(dfs)
     b=2
     i=1
@@ -305,25 +305,27 @@ def pipeline_with_chart(image,model,w,h,c):
 At the end we have implemented the model for real time video capture that will recognize your face and emotion. Below is the code snippet and some examples from us. 
 
 ```
-cap=cv2.VideoCapture(0) 
-while True:
-        ret, frame=cap.read() 
-        if ret:
-                frame = pipeline_video(frame,model)
-                cv2.imshow('frame', frame)
-                cv2.waitKey(1)
+def video_capture(model):
 
-        if cv2.waitKey(1) & 0xFF == ord('a'):
-            break
+      cap=cv2.VideoCapture(0) 
+      while True:
+              ret, frame=cap.read() 
+              if ret:
+                      frame = pipeline_video(frame,model)
+                      cv2.imshow('frame', frame)
+                      cv2.waitKey(1)
 
-cap.release()
-cv2.destroyAllWindows()
+               if cv2.waitKey(1) & 0xFF == ord('a'):
+                      break
+
+      cap.release()
+      cv2.destroyAllWindows()
 
 ```
 
 ### 🔑: Results and conclusions
 
-
+The problem with emotion recognition is something that is worked on for many years now. It is a vital part of many processes in different aspects of the society. We tried to make something that will be rather accurate and useful. Although the models that were produced by the two datasets differ significantly in the accuracy, they give similar results on the unseen images. Furthermore the model trained on FER2013 dataset is more confident in predicting the emotions for the given image.
 
 ## 👏: Authors
 
