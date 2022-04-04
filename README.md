@@ -97,7 +97,7 @@ We split the dataset on **train /test /validation** data with python code and we
 
 In this part of the project, we researched the libraries and neural networks which correspond the best with our needs to finish the tasks. Nowadays, various packages are available to perform machine learning, deep learning, and computer vision problems. 
 
-**OpenCV** is an open-source a video and image processing library and it is used for image and video analysis, like facial detection, license plate reading, photo editing, advanced robotic vision, and many more. It is supported by different programming languages such as R, Python, etc. It runs on most platforms such as Windows, Linux, and macOS. It is a complete package which can be used with other libraries to form a pipeline for any image extraction or detection framework.
+**OpenCV** is an open-source video and image processing library and it is used for image and video analysis, like facial detection, license plate reading, photo editing, advanced robotic vision, and many more. It is supported by different programming languages such as R, Python, etc. It runs on most platforms such as Windows, Linux, and macOS. It is a complete package which can be used with other libraries to form a pipeline for any image extraction or detection framework.
 
 **Python** is a powerful scripting language and is very useful for solving statistical problems involving machine learning algorithms. It has various utility functions which help in pre-processing. Processing is fast and it is supported on almost all platforms.It provides the pandas and numpy framework which helps in manipulation of data as per our needs.
 
@@ -111,7 +111,7 @@ We have trained several models and tried some pre-trained networks (VGG-16, ResN
 
 ***FER2013 dataset***
 
-As was mentioned above FER2013 dataset is pretty complex and large dataset. We thought that we should use some deep convolution networks with lots of layers in order to obtain good accuracy. It took a lot of time to train the models approximately 6 hours and we achieved satisfactory results given the complexity of the images. The research of the previously done works on this dataset has confirmed our assumptions. We have tried to fine tune VGG-16 and ResNet50 but unfortunately we didn't achieve better results than those we had. Below are the architectures od the two models that we used.
+As was mentioned above FER2013 dataset is pretty complex and large dataset. We thought that we should use some deep convolution networks with lots of layers in order to obtain good accuracy. It took a lot of time to train the models - approximately 6 hours and we achieved satisfactory results given the complexity of the images. The research of the previously done works on this dataset has confirmed our assumptions. We have tried to fine tune VGG-16 and ResNet50, but unfortunately we didn't achieve better results than those we had. Below are the architectures od the two models that we used.
 
 **Model 1**
 
