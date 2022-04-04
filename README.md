@@ -86,7 +86,7 @@ This dataset consists of **981 images** belonging to seven classes:
 
 ### Preview CK+
 
-![preview ck+](folder/preview ck+.png)
+![preview_ck+](folder/preview_ck+.png)
 ____________________________________
 - Dataset Preparation
 
@@ -108,11 +108,29 @@ In this part of the project, we research the libraries and neural networks which
 
 **TensorFlow** is used to create large-scale neural networks with many layers. TensorFlow is mainly used for deep learning or machine learning problems such as Classification, Perception, Understanding, Discovering, Prediction and Creation.The advantage of using TensorFlow for object recognition algorithms is that it helps to classify and identify arbitrary objects within larger images.  
 
-We have trained several models and tried some pre-treined(VGG-16, ResNet50) and we got the following accuracies:
+We have trained several models and tried some pre-treined models (VGG-16, ResNet50).
 
-![VGG-16](folder/VGG-16.png)
-![ResNet50](folder/ResNet50.png)
+For the FER2013 dataset the accuracies on the test data are shown in the table below:
+| Model        | Accuracy |
+| ------------ | -------  | 
+| **VGG-16**   | 0.46     | 
+| **ResNet50** | 0.44     | 
+| **Model 1**  | 0.571    | 
+| **Model 2**  | 0.574    | 
+
+It is clear that the models had tough time to learn the dataset. It is a large dataset with images that even human can hardly recognize the emotion.
+The architectures of the two models that we created are below.
+**Model 1**
 ![Emotion_model_arch](folder/emotion_model_arch.png)
+
+**Model 2**
+![Emotion_model_arch](folder/emotion_model_arch.png)
+
+The confusion matrix of the two module showed that the two models differ in the accuracy between the classes although the total accuracy is pretty match the same.
+
+**Confusion matrices of Model 1 and Model 2**
+![Emotion_model_arch](folder/emotion_model_arch.png)
+
 
 ## **TABELI OD MODELI ACCURACIES i network arhitecture**
 
