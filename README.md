@@ -202,7 +202,18 @@ The whole process starts after we have evaluated the models and choose :two: of 
 Both of the models are treined on new unseen images. 
 First we feed the images into a **face detection** function that outputs recognized faces. This faces together with the model are feed into a **get_prediction** function which outputs emotion label, prediction probability for the higest class and dataframe with the probabilities of all the classes. All of this is put into a **pipeline** and the final output is the inputed image with rectangles on the detected faces labeled with emotion and probability. Additionaly each face is printed together with barchart of probability of all classes. 
 
-### preview na output
+**Prediction with model trained on FER2013 dataset**
+
+![output_model_fer](folder/output_model_fer.png)
+
+![output_model_fer_](folder/output_model_fer_.png)
+
+
+**Prediction with model trained on CK+ dataset**
+
+![output_model_ck](folder/output_model_ck.png)
+
+![output_model_ck_](folder/output_model_ck_.png)
 
 > **face detection function**
 
