@@ -120,16 +120,20 @@ For the FER2013 dataset the accuracies on the test data are shown in the table b
 
 It is clear that the models had tough time to learn the dataset. It is a large dataset with images that even human can hardly recognize the emotion.
 The architectures of the two models that we created are below.
+
 **Model 1**
-![Emotion_model_arch](folder/emotion_model_arch.png)
+
+![fer_model_with_shape_info](folder/fer_model_with_shape_info.png)
+
 
 **Model 2**
+
 ![Emotion_model_arch](folder/emotion_model_arch.png)
 
 The confusion matrix of the two module showed that the two models differ in the accuracy between the classes although the total accuracy is pretty match the same.
 
 **Confusion matrices of Model 1 and Model 2**
-![Emotion_model_arch](folder/emotion_model_arch.png)
+![confusion_matrix_fer2013](folder/confusion_matrix_fer2013.png)
 
 
 ## **TABELI OD MODELI ACCURACIES i network arhitecture**
