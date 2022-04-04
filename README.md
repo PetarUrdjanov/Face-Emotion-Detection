@@ -131,9 +131,8 @@ For the FER2013 dataset the accuracies on the test data are shown in the table b
 | **Model 2**  | 0.574    | 
 
 It is clear that the models had tough time to learn the dataset. It is a large dataset with images that even human can hardly recognize the emotion.
-The architectures of the two models that we created are below.
 
-The confusion matrix of the two module showed that the two models differ in the accuracy between the classes although the total accuracy is pretty match the same.
+The confusion matrix of the two module showed that the two models differ in the accuracy between the classes although the total accuracy is pretty much the same.
 
 **Confusion matrices of Model 1 and Model 2**
 
