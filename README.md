@@ -1,5 +1,5 @@
 # Face Detection and Emotion Recognition [![Python 3.7](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/downloads/release/python-360/)
-- Tech/Fameworks used: OpenCV, Keras/TensorFlow, OpenCV and Deep Learning (look at the requirements.txt file)
+- Tech/Fameworks used: OpenCV, Keras/TensorFlow, and Deep Learning
 
 ## Introduction
 Human emotion detection is implemented in many areas requiring additional security or information about the person. Another important domain where we see the importance of emotion detection is for business promotions. Most of the businesses thrive on customer responses to all their products and offers. Also,the use of machines in society has increased widely in the last decades such as robots and in this context, deep learning has the potential to become a key factor to build better interaction between humans and machines, while providing machines with some kind of self-awareness about its human peers, and how to improve its communication with natural intelligence. 
@@ -18,8 +18,7 @@ The task in this project is to create a robust Image classifier, that given an i
 We can generalize the emotion detection steps as follows:
 - *Dataset preprocessing*
 - *Face detection*
-- *Feature extraction*
-- *Classification based on the features*
+- *Classification made by convolutional neural networks*
 
 This project has been divided into three phases: 
 
@@ -82,7 +81,7 @@ This dataset consists of **1280 images** belonging to seven classes:
 | **Total**       | 1280      |
 
 ### Emotion Label CK+
-![EmotionLabel](folder/EmotionLabelCK+.jpg)
+![EmotionLabel](folder/EmotionLabelCK+.png)
 
 ### Preview CK+
 
@@ -108,9 +107,20 @@ In this part of the project, we research the libraries and neural networks which
 
 **TensorFlow** is used to create large-scale neural networks with many layers. TensorFlow is mainly used for deep learning or machine learning problems such as Classification, Perception, Understanding, Discovering, Prediction and Creation.The advantage of using TensorFlow for object recognition algorithms is that it helps to classify and identify arbitrary objects within larger images.  
 
-We have trained several models and tried some pre-treined models (VGG-16, ResNet50).
+We have trained several models and tried some pre-trained networks (VGG-16, ResNet50).
 
 ***FER2013 dataset***
+
+As was mentioned above FER2013 dataset is pretty complex and large dataset. We thought that we should use some deep convolution networks with lots of layers in order to obtain good accuracy. It took a lot of time to train the models approximately 6 hours and we achieved satisfactory results given the complexity of the images. The research of the previously done works on this dataset has confirmed our assumptions. We have tried to fine tune VGG-16 and ResNet50 but unfortunately we didn't achieve better results than those we had. Below are the architectures od the two models that we used.
+
+**Model 1**
+
+![fer_model_with_shape_info](folder/fer_model_with_shape_info.png)
+
+
+**Model 2**
+
+![Emotion_model_arch](folder/emotion_model_arch.png)
 
 For the FER2013 dataset the accuracies on the test data are shown in the table below:
 | Model        | Accuracy |
@@ -122,15 +132,6 @@ For the FER2013 dataset the accuracies on the test data are shown in the table b
 
 It is clear that the models had tough time to learn the dataset. It is a large dataset with images that even human can hardly recognize the emotion.
 The architectures of the two models that we created are below.
-
-**Model 1**
-
-![fer_model_with_shape_info](folder/fer_model_with_shape_info.png)
-
-
-**Model 2**
-
-![Emotion_model_arch](folder/emotion_model_arch.png)
 
 The confusion matrix of the two module showed that the two models differ in the accuracy between the classes although the total accuracy is pretty match the same.
 
@@ -147,6 +148,8 @@ Additionally we compare the metrics for the two models and got the chart below.
 ***Cohn-Kanade dataset***
 
 The Cohn-Kanade dataset on the other hand has relatively small number of images that are easy to be learned for most of the models. In fact one of the models that we created, learned the whole dataset and got 1.0 accuracy on the test dataset. For that purpose we made data augmentation on the whole dataset with some transformations on the images. We trained the model on the augmented dataset and validated on the original dataset. The accuracies of the two models are shown below.
+
+
 
 | Model                | Accuracy |
 | -------------------- | -------  | 
