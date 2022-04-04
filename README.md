@@ -147,9 +147,11 @@ Additionally we compare the metrics for the two models and got the chart below.
 
 ***Cohn-Kanade dataset***
 
-The Cohn-Kanade dataset on the other hand has relatively small number of images that are easy to be learned for most of the models. In fact one of the models that we created, learned the whole dataset and got 1.0 accuracy on the test dataset. For that purpose we made data augmentation on the whole dataset with some transformations on the images. We trained the model on the augmented dataset and validated on the original dataset. The accuracies of the two models are shown below.
+The Cohn-Kanade dataset on the other hand has relatively small number of images that are easy to be learned for most of the models. In fact one of the models that we created, learned the whole dataset and got 1.0 accuracy on the test dataset. For that purpose we made data augmentation on the whole dataset with some transformations on the images. We trained the model on the augmented dataset and validated on the original dataset. The accuracies of the two models are shown below. Before that there is that the architecture of the model which is rather simple opposed of the models trained on FER2013 dataset.
 
+**Model architecture**
 
+![ck_model_architecture](folder/ck_model_architecture.png)
 
 | Model                | Accuracy |
 | -------------------- | -------  | 
