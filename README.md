@@ -166,6 +166,12 @@ The confusion matrix and the other classification metrix are given below.
 
 ![model_scores_ck+](folder/model_scores_ck+.png)
 
+***Model explainability***
+
+Bearing the fact that the CNN and the Deep Learning as a whole are not intuitive for the human brain, it is nice to see what in fact the model learns and how it differs the different classes. We tried to explain the models using shap and we have got some interesting results. Below there are three examples from instances that the model sees them as angry, surprise and happy, respectively with a relatively high percent. The examples are taken from the Cohn-Kanade+ dataset.
+
+
+
 
 
 ![ImplementationPipline](folder/Implement_pipeline.jpg)
