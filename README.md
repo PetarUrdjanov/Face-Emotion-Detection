@@ -11,8 +11,8 @@ This project is a part of Data Science Academy by [Brainster](https://brainster.
 ## 💡: Materials and Methods
 The task in this project is to create a robust Image classifier, that given an image will find all of the faces within the image and then recognize the emotion of the person. The **:seven:emotions** besides neutral class that classifier will need to choose from are:
 
-<img src="https://blog.trginternational.com/hs-fs/hubfs/images/emotion-contempt.jpg?width=600&name=emotion-contempt.jpg" width=200 hight=200> <img src="https://blog.trginternational.com/hs-fs/hubfs/images/emotion-happiness.jpeg?width=595&name=emotion-happiness.jpeg" width=200 hight=200>
-<img src="https://blog.trginternational.com/hs-fs/hubfs/images/emotion-sadness.jpg?width=595&name=emotion-sadness.jpg" width=200 hight=200> <img src="https://blog.trginternational.com/hs-fs/hubfs/images/emotion-fear.jpg?width=519&name=emotion-fear.jpg" width=200 hight=200>
+<img src="https://blog.trginternational.com/hs-fs/hubfs/images/emotion-happiness.jpeg?width=595&name=emotion-happiness.jpeg" width=200 hight=200> <img src="https://blog.trginternational.com/hs-fs/hubfs/images/emotion-sadness.jpg?width=595&name=emotion-sadness.jpg" width=200 hight=200> <img src="https://blog.trginternational.com/hs-fs/hubfs/images/emotion-fear.jpg?width=519&name=emotion-fear.jpg" width=200 hight=200>
+
 <img src="https://blog.trginternational.com/hs-fs/hubfs/images/emotion-disgust.jpg?width=519&name=emotion-disgust.jpg" width=200 hight=200> <img src="https://blog.trginternational.com/hs-fs/hubfs/images/emotion-anger.jpg?width=519&name=emotion-anger.jpg" width=200 hight=200> <img src="https://blog.trginternational.com/hs-fs/hubfs/images/emotion-surprise.jpg?width=600&name=emotion-surprise.jpg" width=200 hight=200>
 
 We can generalize the emotion detection steps as follows:
