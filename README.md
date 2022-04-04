@@ -138,7 +138,7 @@ The confusion matrix of the two module showed that the two models differ in the 
 
 ![confusion_matrix_fer2013](folder/confusion_matrix_fer2013.png)
 
-Additionally we compare the metrics for the two models and got the chart below.
+Additionally we compared the metrics for the two models and got the chart below.
 
 **Metrics comparison on the FER2013 dataset**
 
@@ -146,7 +146,7 @@ Additionally we compare the metrics for the two models and got the chart below.
 
 ***Cohn-Kanade dataset***
 
-The Cohn-Kanade dataset on the other hand has relatively small number of images that are easy to be learned for most of the models. In fact one of the models that we created, learned the whole dataset and got 1.0 accuracy on the test dataset. For that purpose we made data augmentation on the whole dataset with some transformations on the images. We trained the model on the augmented dataset and validated on the original dataset. The accuracies of the two models are shown below. Before that there is that the architecture of the model which is rather simple opposed of the models trained on FER2013 dataset.
+The Cohn-Kanade dataset on the other hand has relatively small number of images that are easy to be learned for most of the models. In fact one of the models that we created, learned the whole dataset and got 1.0 accuracy on the test dataset. For that purpose we made data augmentation on the whole dataset with some transformations on the images. We trained the model on the augmented dataset and validated on the original dataset. The accuracies of the two models are shown below. Before that there is the architecture of the model which is rather simple opposed of the models trained on FER2013 dataset.
 
 **Model architecture**
 
@@ -206,8 +206,8 @@ We can conclude that both of the models learn and recognize as we humans do. For
 ![ImplementationPipline](folder/Implement_pipeline.jpg)
 
 The whole process starts after we have evaluated the models and choose :two: of them for interpretation. One model is trained at FER-2013 and the other on CK+ dataset. 
-Both of the models are treined on new unseen images. 
-First we feed the images into a **face detection** function that outputs recognized faces. This faces together with the model are feed into a **get_prediction** function which outputs emotion label, prediction probability for the higest class and dataframe with the probabilities of all the classes. All of this is put into a **pipeline** and the final output is the inputed image with rectangles on the detected faces labeled with emotion and probability. Additionaly each face is printed together with barchart of probability of all classes. 
+Both of the models are trained on new unseen images. 
+First we feed the images into a **face detection** function that outputs recognized faces. These faces together with the model are feed into a **get_prediction** function which outputs emotion label, prediction probability for the highest class and dataframe with the probabilities of all the classes. All of this is put into a **pipeline** and the final output is the inputed image with rectangles on the detected faces labeled with emotion and probability. Additionaly each face is printed together with barchart of probability of all classes. 
 
 **Prediction with model trained on FER2013 dataset**
 
@@ -326,7 +326,7 @@ def video_capture(model):
 
 ### 🔑: Results and conclusions
 
-The problem with emotion recognition is something that is worked on for many years now. It is a vital part of many processes in different aspects of the society. We tried to make something that will be rather accurate and useful. Although the models that were produced by the two datasets differ significantly in the accuracy, they give similar results on the unseen images. Furthermore the model trained on FER2013 dataset is more confident in predicting the emotions for the given image.
+The problem with emotion recognition is something that is worked on for many years now. It is a vital part of many processes in different aspects of the society. We tried to make something that will be rather accurate and useful. Although the models that were produced by the two datasets differ significantly in the accuracy, they give similar results on the unseen images. Furthermore the model trained on FER2013 dataset is more confident in predicting the emotions for the given image, which is one more proof of the importance of the dataset. Learning from the experience that we gained working on this project, maybe in the future we can build our own dataset for emotion recognition, and also explore more the field of data augmentation and that way train models that will will achive more accuracy. 
 
 ## 👏: Authors
 
