@@ -339,4 +339,3 @@ The problem with emotion recognition is something that is worked on for many yea
 👌Team supervisor:
 * [Viktor Domazetovski](https://github.com/ViktorDo1)
 
-![fer_model_with_shape_info](folder/fer_model_with_shape_info.png)
