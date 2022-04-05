@@ -323,6 +323,10 @@ def video_capture(model):
       cv2.destroyAllWindows()
 
 ```
+Our examples:
+![Marija_happy](folder/Marija_happy.jpg)
+
+
 
 ### 🔑: Results and conclusions
 
