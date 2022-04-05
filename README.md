@@ -203,8 +203,6 @@ We can conclude that both of the models learn and recognize as we humans do. For
 
 **Pipeline for face detection and emotion recognition**
 
-![ImplementationPipline](folder/Implement_pipeline.jpg)
-
 The whole process starts after we have evaluated the models and choose :two: of them for interpretation. One model is trained at FER-2013 and the other on CK+ dataset. 
 Both of the models are trained on new unseen images. 
 First we feed the images into a **face detection** function that outputs recognized faces. These faces together with the model are feed into a **get_prediction** function which outputs emotion label, prediction probability for the highest class and dataframe with the probabilities of all the classes. All of this is put into a **pipeline** and the final output is the inputed image with rectangles on the detected faces labeled with emotion and probability. Additionaly each face is printed together with barchart of probability of all classes. 
