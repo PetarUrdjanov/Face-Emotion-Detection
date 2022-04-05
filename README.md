@@ -324,8 +324,10 @@ def video_capture(model):
 
 ```
 Our examples:
-![Marija_happy](folder/Marija_happy.png)
-![Marija_neutral](folder/Marija_neutral.png)
+
+<img src="folder/Marija_happy.png" width=250 hight=250> <img src="folder/Marija_neutral.png" width=250 hight=250>
+
+<img src="folder/Petar_fear.png" width=250 hight=250> <img src="folder/Petar_neutral.png" width=250 hight=250>
 
 
 ### 🔑: Results and conclusions
