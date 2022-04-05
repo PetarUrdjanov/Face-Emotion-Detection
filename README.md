@@ -326,7 +326,7 @@ def video_capture(model):
 
 ### 🔑: Results and conclusions
 
-The problem with emotion recognition is something that is worked on for many years now. It is a vital part of many processes in different aspects of the society. We tried to make something that will be rather accurate and useful. Although the models that were produced by the two datasets differ significantly in the accuracy, they give similar results on the unseen images. Furthermore the model trained on FER2013 dataset is more confident in predicting the emotions for the given image, which is one more proof of the importance of the dataset. Learning from the experience that we gained working on this project, maybe in the future we can build our own dataset for emotion recognition, and also explore more the field of data augmentation and that way train models that will will achive more accuracy. 
+The problem with emotion recognition is something that is worked on for many years now. It is a vital part of many processes in different aspects of the society. We tried to make something that will be rather accurate and useful. Although the models that were produced by the two datasets differ significantly in the accuracy, they give similar results on the unseen images. Furthermore the model trained on FER2013 dataset is more confident in predicting the emotions for the given image, which is one more proof of the importance of the dataset. Learning from the experience that we gained working on this project, maybe in the future we can build our own dataset for emotion recognition, and also explore more the field of data augmentation and that way train models that will achive more accuracy. 
 
 ## 👏: Authors
 
@@ -338,3 +338,5 @@ The problem with emotion recognition is something that is worked on for many yea
 
 👌Team supervisor:
 * [Viktor Domazetovski](https://github.com/ViktorDo1)
+
+![fer_model_with_shape_info](folder/fer_model_with_shape_info.png)
